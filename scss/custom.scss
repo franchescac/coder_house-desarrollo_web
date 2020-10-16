@@ -1,5 +1,6 @@
 $title_color : #30508a;
-$background_color : #d1cab8;
+$background_color : white;
+// #d1cab8;
 $width_full : 100%;
 
 .main_content { 
@@ -51,6 +52,11 @@ $width_full : 100%;
         height: 120px;
     }
 }
+.slideshow{
+    img {
+        height: 737px;
+    }
+}
 @keyframes example {
     0%   {background-color: #0078ff;}
     25%  {background-color: #4aa7d4;}
@@ -83,14 +89,12 @@ footer {
 
 .summary{
     background: $background_color;
-    width: 100%;
+    width: $width_full;
     height: 600px;
 }
 .summary__image{
-    width: ($width_full)/2;
+    width: ($width_full)*(3/5);
     height: 300px;
-    border: 1px solid black;
-
 }
 .summary__image-poosition{
     text-align: center;
@@ -101,7 +105,6 @@ footer {
 .summary__paragraph{
     width: ($width_full)/2;
     height: 200px;
-    border: 1px solid black;
     margin: 10px;
 }
 .summary__paragraph-position {
@@ -208,4 +211,115 @@ footer {
     .comment-row:hover {
         background: rgba(0, 0, 0, 0.05)
     }
+}
+
+
+// BUSQUEDA ----------------------------------------------------------------
+
+.header { 
+    grid-area: header; 
+}
+
+.image_description { 
+    width: 300px;
+    height: 200px;
+    align-self: center;
+}
+.image1 { 
+    @extend .image_description;
+    grid-area: image1;
+}
+.image2 { 
+    @extend .image_description;
+    grid-area: image2;
+}
+.image3 { 
+    @extend .image_description;
+    grid-area: image3; 
+}
+.image4 { 
+    @extend .image_description;
+    grid-area: image4; 
+}
+
+.description { 
+    width: 150px;
+    height: 200px;
+    align-self: center;
+}
+.description1 {    
+    @extend .description;
+    grid-area: description1; 
+}
+.description2 { 
+    @extend .description;
+    grid-area: description2; 
+}
+.description3 { 
+    @extend .description;
+    grid-area: description3; 
+}
+.description4 { 
+    @extend .description;
+    grid-area: description4; 
+}
+
+.heart { 
+    width: 40px;
+    height: 40px;
+    align-self: center;
+}
+.heart1 { 
+    @extend .heart;
+    grid-area: heart1; 
+}
+.heart2 { 
+    @extend .heart;
+    grid-area: heart2; 
+}
+.heart3 { 
+    @extend .heart;
+    grid-area: heart3; 
+}
+.heart4 { 
+    @extend .heart;
+    grid-area: heart4; 
+}
+
+.map {
+    grid-area: map;
+    img {
+        max-width:100%;
+        max-height:100%;
+    }
+}
+.map__img-black_border {
+    outline-color:black;
+    outline-style: groove;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'header header header map'
+    'image1 description1 heart1 map'
+    'image2 description2 heart2 map'
+    'image3 description3 heart3 map'
+    'image4 description4 heart4 map';
+    grid-template-columns: auto auto auto $width_full/2;
+    grid-gap: 10px;
+    padding: 10px;
+    div {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-center {
 }

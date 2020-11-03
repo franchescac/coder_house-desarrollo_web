@@ -35,21 +35,19 @@ $width_full : 100%;
         *display: inline;
         zoom: 1;
         text-align: center;
-        border: 1px solid black;
         margin:40px;
         padding: 10px;
     }
 }
 .recomendado__content__cuadros{
-    background-color: #0078ff;
-    animation-name: example;
-    animation-duration: 8s;
     p {
         font-family: "Roboto-Thin";
     }
     img {
         width: 120px;
         height: 120px;
+        border-radius: 10%;
+
     }
 }
 .slideshow{
@@ -93,7 +91,7 @@ footer {
     height: 600px;
 }
 .summary__image{
-    width: ($width_full)*(3/5);
+    width: ($width_full)*(3/6);
     height: 300px;
 }
 .summary__image-poosition{
@@ -220,10 +218,13 @@ footer {
     grid-area: header; 
 }
 
-.image_description { 
-    width: 300px;
-    height: 200px;
+.image_description {
     align-self: center;
+    img {
+        width: 300px;
+        height: 200px;
+        border-radius: 10%;
+    }
 }
 .image1 { 
     @extend .image_description;
